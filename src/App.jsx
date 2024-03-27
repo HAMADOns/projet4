@@ -14,6 +14,19 @@ const principalContainer = (
       notre service. Veuillez prendre quelques instants pour nous attribuer une
       note de satisfaction de 1 à 5
     </p>
+    <div>
+      <button
+        type="submit"
+        style={{
+          color: "white",
+          fontWeight: "bold",
+          backgroundColor: "#f59f01",
+          textAlign: "center",
+        }}
+      >
+        Voter
+      </button>
+    </div>
   </div>
 );
 const secondContainer = (
@@ -29,13 +42,14 @@ const secondContainer = (
     </p>
   </div>
 );
-function test() {}
+function Vote() {
+  return <>{principalContainer}</>;
+}
 function App() {
   return (
     <>
       <div>Projet 4</div>
-      {principalContainer}
-      {secondContainer}
+      <Vote />
     </>
   );
 }
