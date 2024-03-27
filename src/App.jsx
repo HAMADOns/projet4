@@ -7,6 +7,7 @@ const principalContainer = (
     className="container"
     style={{ color: "#cac6c6", backgroundColor: "#1f2a36" }}
   >
+    <img src="../public/etoile5.png" alt="" className="image" />
     Votez pour moi
     <p className="text" style={{ color: "#a5a1a1" }}>
       Nous aimerions connaître votre opinion sur votre récente expérience avec

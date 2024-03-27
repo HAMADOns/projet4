@@ -14,5 +14,15 @@
   display: flex;
   font-size: 15px;
   margin-left: 10px;
+  margin-top: 40px;
   text-align: left;
+}
+
+.image {
+  position: relative;
+  top: 10px;
+  left: 10px;
+  width: 40px;
+  height: 40px;
+  background-size: cover;
 }
