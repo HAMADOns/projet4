@@ -5,9 +5,12 @@ import "./styles.css";
 const principalContainer = (
   <div
     className="container"
-    style={{ color: "white", backgroundColor: "#0a0a27" }}
+    style={{ color: "#cac6c6", backgroundColor: "#1f2a36" }}
   >
-    Notez notre service
+    Votez pour moi
+    <p className="text" style={{ color: "#a5a1a1" }}>
+      test test
+    </p>
   </div>
 );
 function test() {}
