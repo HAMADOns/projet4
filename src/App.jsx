@@ -4,11 +4,16 @@ import "./styles.css";
 
 function App() {
   const [showSecondContainer, setShowSecondContainer] = React.useState(false);
+  const [isButtonClicked, setIsButtonClicked] = React.useState(false);
 
   const toggleSecondContainer = () => {
-    setShowSecondContainer(!showSecondContainer);
+    isButtonClicked
+      ? setShowSecondContainer(!showSecondContainer)
+      : alert("Veuillez choisir une note");
   };
-
+  const handleNumberButtonClick = () => {
+    setIsButtonClicked(true);
+  };
   const secondContainer = (
     <div
       className="container"
@@ -39,6 +44,23 @@ function App() {
               expérience avec notre service. Veuillez prendre quelques instants
               pour nous attribuer une note de satisfaction de 1 à 5
             </p>
+            <div className="button-container">
+              <button className="button" onClick={handleNumberButtonClick}>
+                1
+              </button>
+              <button className="button" onClick={handleNumberButtonClick}>
+                2
+              </button>
+              <button className="button" onClick={handleNumberButtonClick}>
+                3
+              </button>
+              <button className="button" onClick={handleNumberButtonClick}>
+                4
+              </button>
+              <button className="button" onClick={handleNumberButtonClick}>
+                5
+              </button>
+            </div>
             <div>
               <button
                 style={{

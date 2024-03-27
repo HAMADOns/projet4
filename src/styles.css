@@ -42,3 +42,27 @@ button {
   margin-bottom: 20px;
   text-align: center;
 }
+
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 10px;
+  width: 30px;
+  height: 30px;
+  background-color: #191725;
+  border-radius: 50px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+.button:active,
+.button:focus {
+  background-color: #f59f01;
+}
+
+.button-container {
+  display: flex;
+}
