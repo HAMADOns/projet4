@@ -3,10 +3,10 @@ import "./App.css";
 import "./styles.css";
 
 function App() {
-  const [showSecondContainer, setShowSecondContainer] = React.useState();
+  const [showSecondContainer, setShowSecondContainer] = React.useState(false);
 
   const toggleSecondContainer = () => {
-    setShowSecondContainer(secondContainer);
+    setShowSecondContainer(!showSecondContainer);
   };
 
   const secondContainer = (
@@ -25,33 +25,37 @@ function App() {
 
   return (
     <>
-      <div>Projet 4</div>
-      <div
-        className="container"
-        style={{ color: "#cac6c6", backgroundColor: "#1f2a36" }}
-      >
-        <img src="../public/etoile5.png" alt="" className="image" />
-        Notez notre service
-        <p className="text" style={{ color: "#a5a1a1" }}>
-          Nous aimerions connaître votre opinion sur votre récente expérience
-          avec notre service. Veuillez prendre quelques instants pour nous
-          attribuer une note de satisfaction de 1 à 5
-        </p>
+      {!showSecondContainer && (
         <div>
-          <button
-            style={{
-              color: "white",
-              fontWeight: "bold",
-              backgroundColor: "#f59f01",
-              textAlign: "center",
-            }}
-            onClick={toggleSecondContainer}
+          <div>Projet 4</div>
+          <div
+            className="container"
+            style={{ color: "#cac6c6", backgroundColor: "#1f2a36" }}
           >
-            Noter
-          </button>
+            <img src="./etoile5.png" alt="" className="image" />
+            Notez notre service
+            <p className="text" style={{ color: "#a5a1a1" }}>
+              Nous aimerions connaître votre opinion sur votre récente
+              expérience avec notre service. Veuillez prendre quelques instants
+              pour nous attribuer une note de satisfaction de 1 à 5
+            </p>
+            <div>
+              <button
+                style={{
+                  color: "white",
+                  fontWeight: "bold",
+                  backgroundColor: "#f59f01",
+                  textAlign: "center",
+                }}
+                onClick={toggleSecondContainer}
+              >
+                Noter
+              </button>
+            </div>
+          </div>
         </div>
-      </div>
-      {showSecondContainer}
+      )}
+      {showSecondContainer && secondContainer}
     </>
   );
 }
