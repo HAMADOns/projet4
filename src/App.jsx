@@ -9,7 +9,9 @@ const principalContainer = (
   >
     Votez pour moi
     <p className="text" style={{ color: "#a5a1a1" }}>
-      test test
+      Nous aimerions connaître votre opinion sur votre récente expérience avec
+      notre service. Veuillez prendre quelques instants pour nous attribuer une
+      note de satisfaction de 1 à 5
     </p>
   </div>
 );
